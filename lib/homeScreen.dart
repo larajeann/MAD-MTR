@@ -45,6 +45,7 @@ Widget build(BuildContext context) {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text('Easy', style: TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold)),
+                  Text('(Dishes)', style: TextStyle(color: Colors.white60, fontSize: 12, fontWeight: FontWeight.w300)),
                   Gap(2),
                   Icon(Icons.star_rounded, color: Colors.yellow),
                 ],
@@ -61,6 +62,7 @@ Widget build(BuildContext context) {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text('Medium',  style: TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold)),
+                  Text('(Famous Personalities)', style: TextStyle(color: Colors.white60, fontSize: 12, fontWeight: FontWeight.w300)),
                   Gap(2),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -83,6 +85,7 @@ Widget build(BuildContext context) {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text('Hard',  style: TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold)),
+                   Text('(Traditional Costumes)', style: TextStyle(color: Colors.white60, fontSize: 12, fontWeight: FontWeight.w300)),
                   Gap(2),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
