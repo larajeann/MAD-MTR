@@ -91,7 +91,7 @@ List<String> getSourceArray(
 }
 
 List<bool> getInitialItemState(Level level) {
-  List<bool> initialItemState = <bool>[]; // Explicitly specify List<bool>
+  List<bool> initialItemState = <bool>[]; 
   if (level == Level.Hard) {
     for (int i = 0; i < 18; i++) {
       initialItemState.add(true);

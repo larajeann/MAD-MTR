@@ -53,8 +53,8 @@ class _FlipCardGameState extends State<FlipCardGame> {
         leading: const Icon(Icons.check_circle_outline_rounded),
         title: const Text("Know Your Icon"),
         centerTitle: true,
-        foregroundColor: Colors.white,
-        backgroundColor: Colors.indigo,
+       backgroundColor: Colors.brown[200],
+      foregroundColor: Colors.white,
         actions: [
                 IconButton(
                   icon: Icon(Icons.logout),
@@ -75,7 +75,7 @@ class _FlipCardGameState extends State<FlipCardGame> {
                 children: [ 
                      Container(    
                       decoration: BoxDecoration(
-                            color: Colors.blue[500], 
+                            color: Colors.brown[500], 
                             borderRadius: BorderRadius.circular(50) 
                            ),
                             child: ListTile(
@@ -86,7 +86,7 @@ class _FlipCardGameState extends State<FlipCardGame> {
                            ),), 
                           SizedBox(height: 15),
                               Container( decoration:   BoxDecoration(
-                                  color: Colors.blue[200], 
+                                  color: Colors.brown[200], 
                                   borderRadius: BorderRadius.circular(50), 
                                 ),
                               child: ListTile( 

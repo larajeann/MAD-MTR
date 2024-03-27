@@ -13,7 +13,7 @@ class _HomeScreenState extends State<HomeScreen> {
 Widget build(BuildContext context) {
   return Scaffold(
     appBar: AppBar(
-      title: Text('Know Your Icon'),
+      title: Text('Know Your Roots'),
       centerTitle: true,
       backgroundColor: Colors.brown[200],
       foregroundColor: Colors.white,
@@ -23,7 +23,7 @@ Widget build(BuildContext context) {
     body: Container(
       decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('assets/animalspics/house.png'),
+            image: AssetImage('assets/pics/house.png'),
             alignment: Alignment.bottomCenter,
             fit: BoxFit.cover, 
             colorFilter: ColorFilter.mode(Colors.black.withOpacity(0.5), BlendMode.darken),
