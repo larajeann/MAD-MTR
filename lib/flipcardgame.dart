@@ -197,7 +197,7 @@ class _FlipCardGameState extends State<FlipCardGame> {
                               child: Padding(
                                 padding: const EdgeInsets.all(8.0),
                                 child: Image.asset(
-                                  "assets/animalspics/quest.png",
+                                  "assets/pics/quest.png",
                                 ),
                               ),
                             ),
