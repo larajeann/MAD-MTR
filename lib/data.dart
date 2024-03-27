@@ -5,24 +5,24 @@ enum Level { Hard, Medium, Easy }
 
 List<String> fillSourceArray() {
   return [
-    'assets/animalspics/dino.png',
-    'assets/animalspics/dino.png',
-    'assets/animalspics/wolf.png',
-    'assets/animalspics/wolf.png',
-    'assets/animalspics/peacock.png',
-    'assets/animalspics/peacock.png',
-    'assets/animalspics/whale.png',
-    'assets/animalspics/whale.png',
-    'assets/animalspics/octo.png',
-    'assets/animalspics/octo.png',
-    'assets/animalspics/fish.png',
-    'assets/animalspics/fish.png',
-    'assets/animalspics/frog.png',
-    'assets/animalspics/frog.png',
-    'assets/animalspics/seahorse.png',
-    'assets/animalspics/seahorse.png',
-    'assets/animalspics/girraf.png',
-    'assets/animalspics/girraf.png',
+    'assets/animalspics/kare.png',
+    'assets/animalspics/kare.png',
+    'assets/animalspics/sinigang.png',
+    'assets/animalspics/sinigang.png',
+    'assets/animalspics/adobo.png',
+    'assets/animalspics/adobo.png',
+    'assets/animalspics/dingdong.png',
+    'assets/animalspics/dingdong.png',
+    'assets/animalspics/leah.png',
+    'assets/animalspics/leah.png',
+    'assets/animalspics/luna.png',
+    'assets/animalspics/luna.png',
+    'assets/animalspics/rizal.png',
+    'assets/animalspics/rizal.png',
+    'assets/animalspics/wang.png',
+    'assets/animalspics/wang.png',
+    'assets/animalspics/manny.png',
+    'assets/animalspics/manny.png',
   ];
 }
 
@@ -33,7 +33,8 @@ List<String> getSourceArray(
   List<String> sourceArray = fillSourceArray().cast<String>();
   if (level == Level.Hard) {
     levelAndKindList.addAll(sourceArray);
-  } else if (level == Level.Medium) {
+  } 
+  else if (level == Level.Medium) {
     for (int i = 0; i < 12; i++) {
       levelAndKindList.add(sourceArray[i]);
     }
