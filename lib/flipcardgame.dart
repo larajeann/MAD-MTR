@@ -51,7 +51,7 @@ class _FlipCardGameState extends State<FlipCardGame> {
     return Scaffold(
       appBar: AppBar(
         leading: const Icon(Icons.check_circle_outline_rounded),
-        title: const Text("Know Your Icon"),
+        title: const Text("FilipiKnows"),
         centerTitle: true,
        backgroundColor: Colors.brown[200],
       foregroundColor: Colors.white,
@@ -165,7 +165,9 @@ class _FlipCardGameState extends State<FlipCardGame> {
                                           type: QuickAlertType.success,
                                           title: 'Finished!',
                                           text: 'Great Job!',
-                                          confirmBtnColor: Colors.indigo,
+                                          confirmBtnColor: Colors.brown,
+                                          headerBackgroundColor: Colors.brown,
+                                         
                                       );
                                         setState(() { print('won');
                                           _isFinished = true;
