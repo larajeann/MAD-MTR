@@ -16,7 +16,7 @@ void playAudio() async {
   await audioPlayer.play((AssetSource('audio/bgm.mp3')));
    audioPlayer.onPlayerComplete.listen((event) {
     audioPlayer.play( AssetSource('audio/bgm.mp3'));
-     });
+  });
  
 }
   void _toggleAudio() async {
@@ -27,8 +27,8 @@ void playAudio() async {
     if (isAudioOn) {
        await audioPlayer.resume();
     } else { 
-      isAudioOn = false;
-      await audioPlayer.stop();
+      
+      await audioPlayer.pause();
     }
   }
 

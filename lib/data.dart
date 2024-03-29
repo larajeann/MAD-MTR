@@ -11,18 +11,6 @@ List<String> fillSourceArray() {
     'assets/pics/sinigang.png',
     'assets/pics/adobo.png',
     'assets/pics/adobo.png',
-    'assets/pics/dingdong.png',
-    'assets/pics/dingdong.png',
-    'assets/pics/leah.png',
-    'assets/pics/leah.png',
-    'assets/pics/luna.png',
-    'assets/pics/luna.png',
-    'assets/pics/rizal.png',
-    'assets/pics/rizal.png',
-    'assets/pics/wang.png',
-    'assets/pics/wang.png',
-    'assets/pics/manny.png',
-    'assets/pics/manny.png',
   ];
 }
 

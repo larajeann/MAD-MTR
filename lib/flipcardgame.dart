@@ -79,7 +79,7 @@ class _FlipCardGameState extends State<FlipCardGame> {
                             borderRadius: BorderRadius.circular(50) 
                            ),
                             child: ListTile(
-                            title: const Center(child: Text('Replay',
+                            title: const Center(child: Text('Play Again',
                             style: TextStyle(color: Colors.black, fontSize: 18, fontWeight: FontWeight.bold))),  
                             onTap: () => restart(),
 
@@ -109,15 +109,14 @@ class _FlipCardGameState extends State<FlipCardGame> {
         : Scaffold(
             body: SafeArea(
               child: SingleChildScrollView(
-                child: Column(
+                child: Column(  
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
                     Padding(
                       padding: const EdgeInsets.all(16.0),
-                      child: Column(
+                      child: Column( crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
-                                Text('Pair Left:$_left',
-                                    style: Theme.of(context).textTheme.displayMedium,
-                                ), 
+                               Text('Pairs Left: $_left',style: Theme.of(context).textTheme.headlineSmall), 
                               ],
                             ),
                     ),
@@ -209,7 +208,7 @@ class _FlipCardGameState extends State<FlipCardGame> {
                         itemCount: _data.length,
                       ),
                     )
-
+                
                   ],
                 ),
               ),
