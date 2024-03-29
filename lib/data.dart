@@ -55,7 +55,7 @@ List<String> fillSourceArrayH() {
 List<String> getSourceArray(
   Level level,
 ) {
-  List<String> levelAndKindList = <String>[]; 
+  List<String> levelAndKindList = <String>[];  //to hold the source array
   List<String> sourceArray = fillSourceArray().cast<String>();
   List<String> sourceArrayM = fillSourceArrayM().cast<String>();
   List<String> sourceArrayH = fillSourceArrayH().cast<String>();
@@ -97,7 +97,7 @@ List<bool> getInitialItemState(Level level) {
 }
 
 List<GlobalKey<FlipCardState>> getCardStateKeys(Level level) {
-  List<GlobalKey<FlipCardState>> cardStateKeys = <GlobalKey<FlipCardState>>[]; 
+  List<GlobalKey<FlipCardState>> cardStateKeys = <GlobalKey<FlipCardState>>[];  //used to access the state of individual FlipCard
   if (level == Level.Hard) {
     for (int i = 0; i < 18; i++) {
       cardStateKeys.add(GlobalKey<FlipCardState>());

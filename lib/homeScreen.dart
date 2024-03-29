@@ -27,7 +27,7 @@ void playAudio() async {
     if (isAudioOn) {
        await audioPlayer.resume();
     } else { 
-      
+      isAudioOn==false;
       await audioPlayer.pause();
     }
   }

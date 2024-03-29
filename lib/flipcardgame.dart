@@ -27,7 +27,7 @@ class _FlipCardGameState extends State<FlipCardGame> {
   late List<bool> _cardFlips;
   late List<GlobalKey<FlipCardState>> _cardStateKeys;
 
-  Widget getItem(int index) {
+  Widget getItem(int index) { // pangkuha po ito ng data/pics then displays it
     return Container(
       decoration: BoxDecoration(
           color: Colors.grey[100],
@@ -127,10 +127,10 @@ class _FlipCardGameState extends State<FlipCardGame> {
                         physics:  const NeverScrollableScrollPhysics(),
                         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3),
                         itemBuilder: (context, index) {
-                          if (!_start) {
+                          if (!_start) { 
                             return getItem(index);
                           }
-                        return FlipCard(
+                        return FlipCard( 
                             key: _cardStateKeys[index],
                             onFlip: () {
                               if (!_flip) {
@@ -139,25 +139,27 @@ class _FlipCardGameState extends State<FlipCardGame> {
                               } else {
                                 _flip = false;
                                 if (_previousIndex != index) {
-                                  if (_data[_previousIndex] != _data[index]) {
+                                  if (_data[_previousIndex] != _data[index]) 
+                                  { //cards DONT match po
                                     _wait = true;
-                                    Future.delayed(const Duration(milliseconds: 1000), () {
-                                      _cardStateKeys[_previousIndex].currentState!.toggleCard();
+                                    Future.delayed(const Duration(milliseconds: 1000), () { //used to give users a chance to see the unmatched cards before they flip back.
+                                      _cardStateKeys[_previousIndex].currentState!.toggleCard(); //effectively flips the previous card back to its original state which is true
                                       _previousIndex = index;
                                       _cardStateKeys[_previousIndex].currentState!.toggleCard();
-                                      Future.delayed(const Duration(milliseconds: 150), () {
+                                      Future.delayed(const Duration(milliseconds: 150), () { //ensure that the card flip animation completes before updating the state. para hindi mag overlap
                                         setState(() {
-                                          _wait = false;
+                                          _wait = false; //This triggers a rebuild of the UI
                                         });
                                       });
                                     });
-                                  } else {
+                                  } 
+                                  else {  //cards MATCH po
                                     _cardFlips[_previousIndex] = false;
                                     _cardFlips[index] = false;
                                     setState(() {
-                                      _left -= 1;
+                                      _left -= 1; //meaning bawas na po yung pairs
                                     });
-                                    if (_cardFlips.every((t) => t == false)) {
+                                    if (_cardFlips.every((t) => t == false)) { //na matched na po lahat
                                       Future.delayed(const Duration(milliseconds: 800), () {
                                         QuickAlert.show(
                                           context: context,
@@ -166,7 +168,6 @@ class _FlipCardGameState extends State<FlipCardGame> {
                                           text: 'Great Job!',
                                           confirmBtnColor: Colors.brown,
                                           headerBackgroundColor: Colors.brown,
-                                         
                                       );
                                         setState(() { print('won');
                                           _isFinished = true;
@@ -218,13 +219,13 @@ class _FlipCardGameState extends State<FlipCardGame> {
   }
   
  void restart() {
-  _data = getSourceArray(_level).cast<String>(); 
-  _cardFlips = getInitialItemState(_level);
+  _data = getSourceArray(_level).cast<String>(); //retrieves the data from the fillSource with the given level
+  _cardFlips = getInitialItemState(_level); 
   _cardStateKeys = getCardStateKeys(_level);
-  _left = (_data.length ~/ 2);
+  _left = (_data.length ~/ 2); // the length of the data divided by 2 po
   _isFinished = false;
 
-  _cardStateKeys.forEach((key) {
+  _cardStateKeys.forEach((key) { //yung present state nung card kung naka face up ba or hindi
     key.currentState?.toggleCard();
   });
 
